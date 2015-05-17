@@ -1,0 +1,35 @@
+Mini Task 2
+	
+1.	This was rather a simple task, but I complicated it.
+	Instead of adding the 'onclick' attribute to the div element in the html part. I had used functions like "  "id".click(function(){});  "  in the javascript part due to which
+	my code didn't work for subsequent clicks. Spent a lot of time stuck, tried calling reload() function etc.., but all went in vain not realising a simple change would complete the task.
+	
+	remaining was quite easy i guess.
+	
+2. 	Concepts learnt.
+	1. Concept of random functions.
+	2. div elements.
+	3. Events (' onclick ')
+	4. Functions.
+	5. id
+	6. some amount of css.
+	7. inline and internal styling
+	8. variables
+	9. the 'document.getElementById() that fetches the first element with the given id.
+	10. other basic html and css features
+	
+3.  Experience with mentor:
+	He was nice and helpful. Didnt point out any mistake directly, rather he made me find out all my bugs.
+	Gave a lot of useful reference links. IRC sessions were chilled out with casual chatting as well. Very patient. Listens to all our doubts.
+	The mini-tasks are really good as well. Makes us learn a lot.
+	
+	Review:
+	20 min long. Had about 6 questions. I wasnt able to answer a few questions as I didnt go through the references properly.
+	The questions checked our actual knowledge on the subject.
+	
+	Advanced task:
+	Really nice. Gave me some confidence. I was able to finish the first part in a matter of minutes, but I couldnt expand the div element in all directions. Finally got the logic which
+	gave me some good confidence. 
+	
+	
+	
