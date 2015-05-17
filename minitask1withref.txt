@@ -1,0 +1,62 @@
+Delta minitask 1 (WITH REF)
+
+1. Web development is a broad term for the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing the simplest static single page of plain text to the most complex web-based internet applications, electronic businesses, and social network services.
+
+2. A web browser (commonly referred to as a browser) is a software application for retrieving, presenting and traversing information resources on the World Wide Web. An information resource is identified by a Uniform Resource Identifier (URI/URL) and may be a web page, image, video or other piece of content.
+
+3. The main function of a browser is to present the web resource you choose, by requesting it from the server and displaying it in the browser window. The resource is usually an HTML document, but may also be a PDF, image, or some other type of content. The location of the resource is specified by the user using a URI (Uniform Resource Identifier).
+
+The browser's main components are (1.1):
+
+1.The user interface: this includes the 	address bar, back/forward button, 	bookmarking menu, etc. Every part of the browser display except the window where you see the requested page.
+2.The browser engine: marshals actions 	between the UI and the rendering engine.
+3.The rendering engine : responsible for 	displaying requested content. For example if the requested content is HTML, the rendering engine parsesHTML and CSS, and displays the parsed 	content on the screen.
+4.Networking: for network calls such as 	HTTP requests, using different 	implementations for different platform behind a platform-independent interface.
+5.UI backend: used for drawing basic 	widgets like combo boxes and windows. 	This backend exposes a generic interface that is not platform specific. Underneath it uses operating system user interface methods.
+6.JavaScript interpreter. Used to parse 	and execute JavaScript code.
+7.Data storage. This is a persistence 	layer. The browser may need to save all 	sorts of data locally, such as cookies. 	Browsers also support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem.
+	
+4. Any central device in a workstation network that is capable of accepting and passing on information to various nodes can be termed as a server. 
+
+5. When the user clicks a link while surfing the Web, several things are taking place behind the scenes: the request for the Web page is transmitted to the corresponding Web server, the server fetches and assembles the Web page and retransmits it using a protocol like HTTP, and, finally, the user's browser receives the data, converts it, and displays the page to him.
+
+
+6. Not quite clear still
+
+7. World Wide Web
+
+8.Hypertext Markup Language
+
+9. Cascading style sheets
+
+10. JavaScript is the programming language of HTML and the Web.It is an high-level object oriented language that is primarily used to design web pages, Apps. It can prompt users etc.., which differentiates it from HTML.
+It is a dynamic programming language. It is most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed. It is also used in server-side network programming with runtime environments such as Node.js, game development and the creation of desktop and mobile applications.
+
+11.  A group of computers and devices on a network that are administered as a unit with common rules and procedures. Within the Internet, domains are defined by the IP address. All devices sharing a common part of the IP address are said to be in the same domain.
+
+12. A global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.
+
+13. Internet Packs are Plans which gives customer a benefit of buying browsing in bulk at discounted rate.
+
+14. A complex collection of web pages in the internet.
+
+15. Uniform Resource Locator
+
+16. Uniform Resource Identifier
+
+17. Generally the text typed is assumed to be a web page and the browser searches all over the internet for it and displays it to the user once found. But, often the URL text is directly linked to a search engine so unless the URL ends with a ".com" the typed text is searched in the engine.
+
+When an URL is typed,several things are taking place behind the scenes: the request for the Web page is transmitted to the corresponding Web server, the server fetches and assembles the Web page and retransmits it using a protocol like HTTP, and, finally, the user's browser receives the data, converts it, and displays the page to him.
+
+
+18. It is a local area wireless computer networking technology. Basically allows interaction of a number of devices without usage of wires.
+
+19. 'http' is hypertext transfer protocol. It is basically a set of rules that the pages must follow in order to interact effectively.
+
+HTTP functions as a request-response protocol in the client-server computing model. A web browser, for example, may be the client and an application running on a computer hosting a web site may be the server. The client submits an HTTP request message to the server. The server, which provides resources such as HTML files and other content, or performs other functions on behalf of the client, returns a response message to the client. The response contains completion status information about the request and may also contain requested content in its message body.
+
+20. http - hypertext transfer protocol
+       ftp - file transfer protocol
+       ssl - Secure Sockets Layer.
+       
+All these are protocols. Protocols are a set of well-defined rules that every node in workstation must follow in order to share information with each other. 
