@@ -1,0 +1,225 @@
+ MINI TASK 3
+ 
+1. 	Firstly, a web console basically logs information associated WITH A WEBPAGE, such as
+	javascript,css commends, network requests, other security errors and warnings and other 
+	informational messages.
+
+	A browser console is similar to the web console on the fact that it logs the same sorts 
+	of information as the web console, however rather than logging this information for a single
+	content tab like the web console, it logs info for all content tabs.
+	Basically a browser console is applied to the whole browser rather than a single tab.
+ 
+	It consists of 3 parts,
+		1)a toolbar at the top that enables us to filter the msgs that appear as css,js etc..,
+		2)a pane that displays the message.
+		3)a command line interpreter enabling us to evaluate javascript expressions.
+	
+	 So the main purpose of browser consoles is debugging.
+	 
+	 
+
+2.  var images = $$('img');\\ $$--> selectorall, returns an array of all <img> elements.
+	for(each in images)
+	{
+	images[each].src="https://goo.gl/P0Xgv7"; \\ source of each image changed 
+	}
+	
+	
+3. <kbd>
+	This tag is basically used to display text in browser's default monospace font.
+	eg:
+	<p>press <kbd>Ctrl</kbd> + <kbd>s</kbd> to save a file.
+	
+	<marquee>
+	By default text within marquee tags move from right to left.
+	eg:
+	<marquee direction = "up>hello</marquee> \\moves bottom to up
+	
+	<blink>
+	text inside <blink> tag will 'blink'. Supported only in opera browser.
+	
+	"onerror" in javascript
+	onerror event in javascript is triggered when there is a problem loading an external file.
+	eg:
+	<img src = " Hello.jpg" onerror = "errorFunc()"> \\when the image cant be loaded the 'errorFunc() is called
+	
+
+4.	Each element can have only 1 id, but can have multiple classes.
+	Each page can have only one element with that id, while multiple elements can have same class.
+
+	Information that is reusable should be kept in a class and 
+	information that is totally unique should be kept in an ID.
+	
+	id's have special abilities that classes don't
+	eg: http://youtube.com#id2
+	here, browser will attempt to locate an element with id = 'id2'.
+	
+	elements can have both ids and classes
+	
+	id's have an advantage as they are unique. An element defined with an id can be easily accessed by the function document.getElementById() while elements defined with classes cant be accessed this way.
+	
+	classes have and advantage as they favour reusability of code. A number of elements having same attributes can be defined under one class.
+	
+	
+5.	== operator checks for loose ineguality.
+	if LHS and RHS are of same type they are directly compared.
+	if not,
+	It converts the given operands to numbers.
+	Converts string containing numbers to the numbers they contain.
+	Converts booleans to 0 and 1.
+	Empty strings correspond to false while non-empty strings correspond to true.
+	
+	a) Since both sides have strings, its directly compared and outputs false as an empty string is not equal to a non-empty string.
+	b) LHS and RHS are of different types. So outputs true as a non-empty string as well as 0 corresponds to false.( false==false  = true).
+	c) LHS and RHS are of different types so '0' is convereted to 0 (Converts string containing numbers to the numbers they contain) hence outputs true. (0 == 0   = true).
+	
+	
+6.	In any programming language, the return statement allows a function to specify a return value which is passed to the code that called the function. It can be called without 
+	specifying a value as well, in which case the program just breaks out of the current function and goes to the code that contained the calling function.
+	
+	
+7. 	Funtional programming in any language is basically the process of making a program more modular, implementing abstraction and promoting reusabilty of code. 
+	Modular - The program is divided into multiple modules so that a reader can easily understand the program.
+	Abstraction - Hiding of irrelevant info from the user is termed as abstraction. 
+				eg: we can write a function calcFactorial() that returns factorial of a given number. All the user needs to know is that calcFactorial() returns factorial of a number and 
+				not exactly how its implemented.
+	Reusability - the same code need not be typed again which expands code size unnecessarily.
+	
+	Javsscript facilitates functional programming :
+	
+	All function declarations are automatically converted to expressions and hoisted.
+	( hoisting is automatically sending function or variable declarartions to the top of the code so that the variable or function can be used before its declaration)
+	
+	functions can be passed as arguments to other functions as functions are also essentially objects.
+	
+	Regardless of however a function is defined in javascript it has dynamic arguments and dynamic context.
+		dynamic arguments -  arguments array contains all the arguments sequentially in the order they were passed. Hence arguments can be passed with any set of arguments offering flexibility.
+		dynamic context - the 'this' object. 'this' contains the address of the object currently invoking that function.
+
+
+8.  Javascript does not have block-level scope.
+	The 2nd statement simply re-initialises the value of x to 10.
+	
+	C/C++ has block-level scope.
+	ie. when control enters the block, another variable x is created and the value 10 is stored in it, and when block ends the local x is destroyed and only global x is available,
+	hence same statements in c/c++ displays 5.
+	
+	
+9.	browser cache:
+	browser cache exists because of the basic assumption by designers that your internet connection is slower than your computer. ie. it means that displaying data from your hard disk
+	is faster than to get it by downloading from internet. When we load a web page, images involved in the pages like page logo are downloaded and stored in browser cache ( a place in the hard disk ).
+	So the next time the page is loaded, rather than downloading the image again the image is retrieved from the cache which is faster.
+	
+	
+10.
+
+	//Works only in IE
+	
+	<html>
+	<style>
+	#ball
+	{
+		height:100px;
+		width:100px;
+		border-radius:50px 50px 50px 50px;
+		position:absolute;
+		top:400px;
+		left:400px;
+		background-color:black;
+	}
+	</style>
+	<body onkeydown = "move()">
+	<div id = "ball">
+	</div>
+	</body>
+	<script>
+	var ball = document.getElementById('ball');
+
+	ball.style.posTop = ball.offsetTop;
+	ball.style.posLeft = ball.offsetLeft;
+	
+	function move()
+	{	
+	var keyCode = window.event.keyCode;
+	
+	if (keyCode == '38') // up
+    ball.style.posTop-=10;
+	
+    else if (keyCode  == '40')//down
+    ball.style.posTop+=10;
+
+    else if (keyCode  == '37') //left
+    ball.style.posLeft-=10;
+
+    else if (keyCode  == '39') // right
+    ball.style.posLeft+=10;
+	}
+	</script>
+	</html> 
+	
+	
+11.	The classical class inheritance doesnt exist in javascript. It rather uses prototypical inheritance.
+	
+	Namespace: Is just another object that allows developers to bundle up functionality and it contains methods, properties and objects.
+	
+	This type of programming is called prototypical programming, it is an OOP model that doesnt use classes, but rather accomplishes behavior reuse by decorating existing 
+	prototype objects.
+	eg:
+	An object is created as such 
+	
+	var MYAPP = MYAPP || {} ; \\ checks if already exists else creates new
+	
+	MYAPP.event = {} ; \\ creation of subspaces
+	
+	MYAPP.commonMethod = { \\ a subspace that can be used to contain all methods and properties.
+	
+	}
+	
+	Defining a class:
+	
+	var person = function(Name,Age) { 
+	this.Name = Name'
+	this.Age = Age;
+	}
+	
+	var person1 = new person(); \\ creating object.
+	
+	Constructor:
+	
+	The constructor is called at the moment of instantiation.In JavaScript the function serves as the constructor of the object, therefore there is no need to explicitly define a constructor method. 
+	Every action declared in the class gets executed at the time of instantiation.
+	
+	Javascript supports only single inheritance, as shown:
+	
+	var Person = function(firstName){		\\parent class
+		this.firstName = firstName;
+		}
+		
+	var Student = function(firstName, subject) \\ child class, inherits all methods from the parent class if defined.
+	{
+		Person.call(this, firstName);     
+		this.subject = subject;
+	}
+	
+	Every object in JavaScript is an instance of the object Object and therefore inherits all its properties and methods.
+	
+	In languages such as c++,
+	oop is implemented through classes and inheritance is as shown (here single, but c++ supports other forms of inheritance also)
+	
+	eg:
+	
+	class Human
+	{
+		private: ..
+		protected: ..
+		public:.. 
+	};
+	
+	class student: public Human
+	{
+		private: ..
+		protected: ..
+		public:.. 
+	};
+	
+	student ob; \\ object of type student declared.
