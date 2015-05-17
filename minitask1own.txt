@@ -1,0 +1,44 @@
+Delta minitask 1 (OWN)
+
+1. Web development is basically the process of development or designing a website with the help of certain languages like HTML and Javascript which can be accessed through the internet. 
+
+2. A browser is a software used to surf the world wide web for a variety of reasons primarily as a source of information.
+
+3. When an URL is typed into a web browser. The browser searches the world wide web for it. Once the resource has been found the browser helps in displaying it to the user. 
+
+4. Any central device in a workstation network that is capable of accepting and passing on information to various nodes can be termed as a server. 
+
+5. I do not have a clear idea. I guess they interact with browsers and help in displaying the requested web page.
+
+6. No clear idea.
+
+7. World Wide Web
+
+8.Hypertext Markup Language
+
+9. Cascading style sheets
+
+10. JavaScript is an high-level object oriented language that is primarily used to design web pages, Apps. It can prompt users etc.., which differentiates it from HTML.
+
+11. A collection of computers or other devices that interact together with a common platform.
+
+12. A global network system that connects over several billion devices which follow a set of common rules caled protocols. It is used for a wide number of reasons. 
+
+13. No clear idea
+
+14. A complex collection of web pages in the internet.
+
+15. Uniform Resource Locator
+
+16. Uniform Resource Indicator
+
+17. Generally the text typed is assumed to be a web page and the browser searches all over the internet for it and displays it to the user once found. But, often the URL text is directly linked to a search engine so unless the URL ends with a ".com" the typed text is searched in the engine.
+
+18. Wire free Internet. Basically allows interaction of a number of devices without usage of wires.
+
+19. 'http' is hypertext transfer protocol. It is basically a set of rules that the pages must follow in order to interact effectively.
+
+20. http - hypertext transfer protocol
+       ftp - file transfer protocol
+       ssl,tsl - dont know.
+All these are protocols. Protocols are a set of well-defined rules that every node in workstation must follow in order to share information with each other. 
