@@ -1,0 +1,49 @@
+MiniTask7
+
+1. A server is a running instance of an application (software) capable of accepting requests from the client and giving responses accordingly. 
+   Servers can run on any computer including dedicated computers, which individually are also often referred to as "the server".
+   They basically run to serve the requests of other programs (the clients). Thus server does tasks on behalf of the client. It facilitates clients to share data, 
+   info and other hardware resources.
+   
+
+2. In computer networking, localhost is a hostname that means "this computer" and may be used to access the computer's own network services via its 
+   loopback network interface. Using the loopback interface bypasses local network interface hardware.
+   On most computer systems, "localhost" resolves to the IP address 127.0.0.1, which is the most commonly used IPv4 loopback address, 
+   and to the IPv6 loopback address ::1.
+   
+3. Loopback generally refers to the routing of  electronic signals, digital data streams, or flows of items back to their source without
+   intentional processing or modification. Primarily done to test transmission infrastructure. 
+   Loopback addresses are special IP numbers (127.0.0.1) that are designated for the software loopback interface of a machine. This interface does not
+   have any hardware associated with it, and is also not physically connected to any network. It's like being connected to itself.
+   eg: this allows testing of client/server software with both parts being in the same machine.
+   
+4. The IPv4 network standards have reserved the entire 127.0.0.0/8 address block for loopback purposes. This means that any packet sent to one of those 16,777,214 
+   addresses will be looped back. 
+   The reason that there is a range of ip addresses reserved for loopback purposes rather than having a single one (127.0.0.1) is to simulate a large number of
+   different computers in a fast network without using virtual machines. This is useful when we want a number of web servers to run locally on port 80. 
+   And also to permit more locally running services than the TCP (transmission control protocol) would permit.
+   
+5. XAMPP is a free and open source cross-platform web server solution stack package developed by Apache Friends. XAMPP is regularly updated to incorporate 
+   the latest releases of Apache, MySQL, PHP and Perl. XAMPP's designers intended it for use only as a development tool,
+   to allow website designers and programmers to test their work on their own computers without any access to the Internet. 
+   To make this as easy as possible, many important security features are disabled by default.
+   XAMPP also provides support for creating and manipulating databases in MySQL 
+   
+   phpMyAdmin is a free and open source tool written in PHP intended to handle the administration of MySQL with the use of a web browser. 
+   It can perform various tasks such as creating, modifying or deleting databases, tables, fields or rows; executing SQL statements; or managing users and permissions.
+   
+6. Generally in server side scripting the website owner hides his source code from the user interface, so that the user doesnt
+   have access to all the code received by the client. Hence server scripts are hidden in the page source.
+   
+7. htdocs is the directory that the web server software (Apache) looks for files to serve on your domain. 
+   Anything you want web-viewable needs to be inside htdocs.
+   To make new projects we create a directory in the www folder.
+   
+8. In a client-server mechanism the tasks are partitioned between the servers(providers of a resource) and the clients(service requesters). They communicate over 
+   a computer network on a seperate hardware, but both might reside in the same system.
+   A server host runs one or more server programs which share their resources with clients. A client does not share any of its resources, 
+   but requests a server's content or service function. Clients therefore initiate communication sessions with servers which await incoming requests.
+   The client sends a request, and the server returns a response. This exchange of messages is an example of inter-process communication. 
+   To communicate, the computers must have a common language, and they must follow rules so that both the client and the server know what to expect.
+   The language and rules of communication are defined in a communications protocol.
+   
