@@ -1,0 +1,112 @@
+Minitask8
+
+1. 	Dynamic programming is a method where you solve a complex problem by breaking it down into a collection of simpler subproblems. To solve a problem with a 
+	DP approach, we need to solve different parts of the problem(subproblems), then combine their solutions to reach an overall solution. 
+	This method takes, far less time than other methods that don't take advantage of the subproblem overlap. Basically, in this approach, each subproblem is 
+	solved only once, thus reducing the number of computations, once the solution to the given subproblem is computed, it is stored.The next time the solution is
+	needed it is simply looked up.
+   
+	one of the nice eg. with DP approach I saw.
+	http://www.geeksforgeeks.org/how-to-print-maximum-number-of-a-using-given-four-keys/
+	
+2. 	Time complexity:
+	The total number of steps involved in a solution to solve a problem is the function of the size of the problem, which is basically a measure of that problem's
+	time complexity.
+	General order:
+	c<O(logn)<O(n)<O(nlogn)<O(n^c)<O(c^n)<O(n!)
+   
+	Space complexity:
+	Space complexity is a measure of the amount of working storage an algorithm needs. That means how much memory, in the worst case,
+	is needed at any point in the algorithm.
+	Space complexity is measured by using polynomial amounts of memory, with an infinite amount of time. 
+   
+3. 	The general recurrence relation of a binary search algorithm. 
+
+	T(n) = T(n/2) + c. 
+	so replacing n as n/2, then n/4 so on..
+	T(n) = T(n/2^k) + kc. 
+	put n as 2^k.
+	so T(n) = T(1) + c*logn. 
+
+	since T(1) is a constant the time complexity of binary search algorithm is said to be O(logn).
+	
+4.	Windows XP:
+	it was hard to zero in on the exact file you wanted.  Sure you would end up in the proximity of your coveted file but even then you had to manually hunt through 
+	the results until you found it.  In addition, searching in XP was beleaguered by performance problems because it did a poor job indexing the file system.
+	
+	Windows Vista:
+	It used an incremental search algorithm meaning the operating system searched as you typed.  It even supported natural language searches.
+
+	Windows 7:
+	searching was as easy as clicking Start and typing.  Search pros would use logical operators like NOT to gain true mastery over results.  For example, 
+	you could search for “lion NOT Apple” to find pictures of the lions from last years North African safari (but not Apple’s eponymous operating system).  
+	Or you could search for files based on specific properties.
+	
+	Windows 8.1:
+	Windows 8.1 uses a new search algorithm called smart search which uses natural language understanding. When performing a search on our devices or on the internet,
+	we use keywords to find what we are interested in.
+    ‘Natural language understanding’ is the process of separating important keywords from a natural context and using them to return appropriate search results.
+	
+5.  X86 and x64 are both processor sizes that are available when purchasing a computer, though they differ in terms of performance.
+	x86 is a family of instruction set architectures that are based on the original Intel 8086 CPU. It was originally introduced as a 16-bit extension 
+	of Intel’s 8-bit 8080 processor and was launched in 1978. The family offers a variety of different processor sizes including 16-bit, 32-bit and 64-bit, 
+	with additional sizes under development. All the extensions to the x86 families are fully backward compatible,
+	
+	The x64 is an instruction set architecture that belongs to the x86 family. The original specification was created by AMD and is now used by other companies such as Intel, 
+	VIA, Apple, etc. It supports large amounts of virtual memory and physical memory than its predecessors. It was originally launched for servers that required 
+	capacity to handle greater loads and memory requirements, but now is compatible in almost all PCs. x64 is backward compatible and can work with 32-bit programs,
+	however it is unable to work with 16-bit programs.
+	
+6.  /* Learnt from geeksforgeeks */
+	#include <iostream>
+	#include <stdio.h>
+
+	using namespace std;
+ 
+	void multiply(int F[2][2], int M[2][2])
+	{
+		int x =  F[0][0]*M[0][0] + F[0][1]*M[1][0];
+		int y =  F[0][0]*M[0][1] + F[0][1]*M[1][1];
+		int z =  F[1][0]*M[0][0] + F[1][1]*M[1][0];
+		int w = F[1][1] =  F[1][0]*M[0][1] + F[1][1]*M[1][1];
+
+		F[0][0] = x;
+		F[0][1] = y;
+		F[1][0] = z;
+		F[1][1] = w;
+		
+	}
+
+	void power(int F[2][2], int n)
+	{
+		if( n == 0 || n == 1)
+		return;
+		int M[2][2] = {{1,1},{1,0}};
+ 
+		power(F, n/2);
+		multiply(F, F);
+ 
+		if (n%2 != 0)
+		multiply(F, M);
+	}
+ 
+	int fib(int n)
+	{
+  
+	int F[2][2] = {{1,1},{1,0}};
+	if (n == 0)
+    return 0;
+	power(F, n-1);
+	return F[0][0];
+  
+	}
+ 
+	int main()
+	{
+	int n;
+	cin>>n;
+	cout<<fib(n);
+  
+	return 0;
+	}
+	
