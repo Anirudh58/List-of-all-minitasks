@@ -1,0 +1,88 @@
+MiniTask5
+
+1. https://jsfiddle.net/3ystv14q/4/
+
+	(With the ntwords improvement)
+
+2.
+a)	Javascript version 1.7
+
+b)
+	This text box, called the omnibox,
+	gets its name because you can type either an address or search phrase in and the program is smart enough to know how to handle different types of input.
+	Navigation The "omnibox" combines the search and address boxes, and pop-up thumbnails show your most-visited destinations.
+	
+	So when I entered anirudh in the omnibox it gave a list of possible URL's that I might be interested in. 
+	1) 'Search' was the first provider and it basically gave the url to googling anirudh.
+	2) The HQP(historyquick provider) is intended to very quickly provide scored autocomplete suggestions from a limited subset of all known historical URL visits, following these rules
+		Provide results in 20 ms or less.
+		Provide the top 3 best matches for the terms typed by the user.
+		Provide results as each character in the terms has been typed.
+		Accommodate all browser supported languages.
+		Consider only URLs:
+			for which the URL was specifically typed into the omnibox OR
+			which has been visited at least at least 4 times OR
+			has been visited within the last 72 hours.
+		Match against the URL and/or the page title.
+		Match against partial strings.
+		Match against one or more terms.
+		Match against internal substrings (i.e. do not limit matches to start-of-string).
+		Provide results immediately upon browser startup.
+		Do not degrade startup and shutdown times.
+		Require reasonable memory resources.
+
+3. 
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+int main()
+{
+    
+    char word[40],result[40];
+    int count[26]={0};
+    
+    cout<<"Enter string:";
+    gets(word);
+    
+    int l = strlen(word);
+    for(int i=0;i<l;i++)
+    count[word[i]-97]++;
+    
+    int max=0;
+    for(int i=0;i<26;i++)
+    {
+            if(count[i]>max)
+            max=count[i];        
+    }
+    
+    int k=0;
+    for(int i=0;i<26;i++)
+    {
+            if(count[i]==max)
+            result[k++]=i+97;        
+    }
+    
+    int flag=0;
+    for(int i=0;i<l;i++)
+    {
+           for(int j=0;j<k;j++)
+           {
+                   if(word[i]==result[j])
+                   {
+                                         cout<<word[i];
+                                         flag=1;
+                                         break;
+                   }  
+           }
+           
+    if(flag==1)
+    break; 
+           
+    }
+    getch();
+    return 0;
+}    
+    
+   
