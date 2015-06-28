@@ -1,0 +1,126 @@
+Minitask4
+
+1.
+<html>
+<body>
+<img src = "1.png" style = "height:400px;width:400px;"></img>
+<img src = "2.png" style = "height:400px;width:400px;"></img>
+<img src = "3.png" style = "height:400px;width:400px;"></img>
+<img src = "4.png" style = "height:400px;width:400px;"></img>
+<img src = "5.png" style = "height:400px;width:400px;"></img>
+<img src = "6.png" style = "height:400px;width:400px;"></img>
+<img src = "7.png" style = "height:400px;width:400px;"></img>
+<img src = "8.png" style = "height:400px;width:400px;"></img>
+<img src = "9.png" style = "height:400px;width:400px;"></img>
+<img src = "10.png" style = "height:400px;width:400px;"></img>
+<img src = "11.png" style = "height:400px;width:400px;"></img>
+<img src = "12.png" style = "height:400px;width:400px;"></img>
+<img src = "13.png" style = "height:400px;width:400px;"></img>
+<img src = "14.png" style = "height:400px;width:400px;"></img>
+<img src = "15.png" style = "height:400px;width:400px;"></img><br><br>
+<a href = "cache.htm" style = "font-size:50px" onclick = "location.reload(true)">Without cache </a><br>
+<a href = "cache.htm" style = "font-size:50px" onclick = "location.reload(false)">Normal reload</a>
+</body>
+</htm>
+
+2.
+<html>
+<style>
+.family1 *{ 
+    display: block;
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+    margin: 15px;
+}
+
+.family2 *{ 
+    display: block;
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+    margin: 15px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+	$(".family1").hover(function(){
+		alert("Parent = html, Child = ul, grand child = li, great grandchild = span, sibling = div(family2) ");
+	});
+	
+	$(".family2").hover(function(){
+		alert("Parent = html, Child = p, grandchild = span, sibling = div (family1) ");
+	});
+	
+	$("#ul").hover(function(){
+		alert("Parent = div(family1), Child = li, grandchild = span ");
+	});
+	
+	$("#li").hover(function(){
+		alert("Parent = ul, Child = span");
+	});
+	
+	$("#span").hover(function(){
+		alert("Parent = li");
+	});
+	
+	$("#para").hover(function(){
+		alert("Parent = div(family2), Child = span2");
+	});
+	
+	$("#span2").hover(function(){
+		alert("Parent = para");
+	});
+	
+});
+</script>
+</head>
+<body>
+<br><br>
+  <div class="family1" style="width:500px;">FAMILY 1
+    <ul id = "ul">ul 
+      <li id = "li">li 
+        <span id = "span">span</span>
+      </li>
+    </ul>   
+  </div>
+  <br><br><br>
+  <div class="family2" style="width:500px;">FAMILY 2
+	<p id = "para"> 
+		<span id = "span2">The quick brown fox jumped over the lazy dog</span>
+	</p>
+  </div>
+</body>
+</html>
+
+3.
+	Cookies:
+	Cookies are data, stored in small text files, on your computer.
+	When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.
+	Cookies were invented to solve the problem "how to remember information about the user":
+		When a user visits a web page, his name can be stored in a cookie.
+		Next time the user visits the page, the cookie "remembers" his name.
+	
+	LocalStorage:
+	With local storage, web applications can store data locally within the user's browser.
+	Local storage is per domain. All pages, from one domain, can store and access the same data.
+	This property allows you to access a local Storage object. localStorage is similar to sessionStorage. 
+	The only difference is that, while data stored in localStorage has no expiration time, data stored in sessionStorage gets 
+	cleared when the browsing session ends - that is when the browser is closed.
+	
+	Similarity:
+	They are both used to "remember data" even after a connection has been shut down.
+
+	Differences:
+	Cookies are primarily for reading server-side, local storage can only be read client-side.
+		if it's client-side we are wasting bandwidth by sending all the data in the HTTP header.(if cookies are used)
+		if it's server-side local storage isn't so useful because you'd have to forward the data along somehow (with hidden form fields or something)
+	Local storage is more secure, and large amounts of data can be stored locally, without affecting website performance.
+	Unlike cookies, the storage limit for localStorage is far larger (at least 5MB) and information is never transferred to the server. 		
+
+4. Showed already in fiddle.
+
+5. http://my.jetscreenshot.com/demo/20150607-jfoe-304kb - Screenshot of my javascript console.
+   http://my.jetscreenshot.com/demo/20150607-sg2n-179kb - Screenshot of my wampserver. 
