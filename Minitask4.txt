@@ -1,6 +1,7 @@
 Minitask4
 
 1.
+// Yes, observed the difference (y).
 <html>
 <body>
 <img src = "1.png" style = "height:400px;width:400px;"></img>
@@ -24,6 +25,9 @@ Minitask4
 </htm>
 
 2.
+/* Understood node relationships (y). 
+I have directly displayed the DOM relationships.
+Also trying to hover over inner elements will cause the hover functions of outer elements also to execute */
 <html>
 <style>
 .family1 *{ 
