@@ -1,0 +1,11 @@
+MiniTask 6.
+
+1. 
+	Binary search tree.
+
+	https://jsfiddle.net/Anirudh58/ooLy3qnu/12/
+
+2. 
+	SHM
+	
+	https://jsfiddle.net/Anirudh58/2fv0593x/2/
