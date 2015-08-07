@@ -1,0 +1,234 @@
+<html>
+<style>
+#timer
+{
+position:absolute;
+top:200px;
+left:1300px;
+height:40px;
+width:100px;
+font-size:25px;
+
+}
+#time
+{
+font-family: Arial;
+position:absolute;
+top:205px;
+left:1200px;
+font-size: 25px;
+
+}
+
+</style>
+<body>
+<canvas id="Canvas" width="1000" height="700" style="border:5px solid #000000;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<span id = "time">TIME </span><input type = "text" id = "timer" >
+</body>
+<script>
+
+var ball = 
+{
+
+	pos:
+	{
+		x: 50,
+		y: 650
+	},
+	
+	vel: 
+	{
+		x: 5,
+		y: 5
+	
+	},
+	
+	accl: 
+	{
+		x: 0,
+		y: 9.81
+	
+	},
+	
+	radius: 50,
+	e: -0.75,
+	friction: 0.975
+
+
+};
+
+var mouse = 
+{
+	down:
+	{
+		x: 0,
+		y: 0
+	
+	},
+	
+	up:
+	{
+		x: 0,
+		y: 0
+	
+	},
+	
+	pos:
+	{
+		x:0,
+		y:0
+	}
+
+
+
+};
+
+var dom = function(id)
+{
+return document.getElementById(id);
+}
+
+var start=0;
+var canvas = dom("Canvas");
+var ctx = canvas.getContext("2d");
+var loop;
+var timer;
+var mouseDown;
+var width = canvas.width, height = canvas.height; 
+
+	loop = requestAnimationFrame(draw);
+	//clearInterval(loop);
+	
+	canvas.onmousemove = getPos;
+    canvas.onmousedown = mouseDown;
+    canvas.onmouseup   = mouseUp;
+	
+	
+function getPos(e)
+{
+mouse.pos.x = e.pageX;
+mouse.pos.y = e.pageY;
+}
+
+function mouseDown(e)
+{
+    if(e.which == 1)
+	{
+		mouseDown = true;
+		getPos(e);
+        /*mouse.down.x = e.pageX;
+		mouse.down.y = e.pageY;*/
+		/*ball.vel.x = 0;
+		ball.vel.y = 0;
+		ball.accl.x = 0;
+		ball.accl.y = 0;*/
+        
+    }
+}
+
+function mouseUp(e)
+{
+    if(e.which == 1)
+	{
+		
+		/*mouse.up.x = e.pageX;
+		mouse.up.y = e.pageY;*/
+		if((mouse.pos.x>ball.pos.x - ball.radius && mouse.pos.x<ball.pos.x + ball.radius) && (mouse.pos.y>ball.pos.y - ball.radius && mouse.pos.y<ball.pos.y + ball.radius))
+		{
+		mouseDown = false;
+		start++;
+		ball.vel.x = (ball.pos.x - mouse.pos.x)/6;
+		ball.vel.y = (ball.pos.y-25 - mouse.pos.y)/6;
+		}
+		ball.accl.y = 9.81;
+		
+ 
+    }
+}
+
+function draw()
+{	
+	ctx.clearRect(0,0,canvas.width,canvas.height);
+	ctx.beginPath();
+	ctx.arc(ball.pos.x, ball.pos.y, ball.radius, 0, 2*Math.PI, false);
+	ctx.fillStyle = "black";
+	ctx.fill();
+	
+	var seconds = 0;
+	if(start==1)
+	{
+	start++;
+	timer = setInterval(function()
+	{
+	dom('timer').value = seconds;
+	seconds++;
+	},1000);
+	}
+	
+	if(mouseDown == true)
+	{
+	/*ctx.beginPath();
+	ctx.moveTo(ball.pos.x, ball.pos.y);
+	ctx.lineTo(mouse.pos.x, mouse.pos.y);
+	ctx.stroke();
+	ctx.closePath();*/
+	}
+	update();
+	
+	requestAnimationFrame(draw);
+}
+
+
+function update()
+{
+
+	ball.vel.x += ball.accl.x/50;
+	ball.vel.y += ball.accl.y/50;
+	
+	ball.pos.x += ball.vel.x;
+	ball.pos.y += ball.vel.y;
+	
+	if (ball.pos.y > height - ball.radius) 
+	{		
+		 if(start!=0)
+		 {
+		 clearInterval(timer);
+		 var time = dom('timer').value;
+		 alert("Your score is " + time);
+		 start=0;
+		 }
+		 
+		 ball.vel.x *= ball.friction;
+		 ball.vel.y *= ball.e;
+         ball.pos.y = height - ball.radius;
+		 
+	}
+    if (ball.pos.y < ball.radius)
+	{	
+		ball.vel.y *= ball.e;
+        ball.pos.y = ball.radius;
+    }
+    if (ball.pos.x > width - ball.radius) 
+	{	
+		 ball.vel.x *= ball.e;
+         ball.pos.x = width - ball.radius;
+    }
+    if (ball.pos.x < ball.radius)
+	{
+		 ball.vel.x *= ball.e;
+         ball.pos.x = ball.radius;
+    }
+	
+	
+
+}
+
+
+
+
+
+
+
+
+</script>
